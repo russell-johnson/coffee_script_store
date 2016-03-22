@@ -12,9 +12,5 @@ class ProductsController < ApplicationController
     render(partial: 'product_card')
   end
 
-  def destroy
-    binding.pry 
-    # @product = params[:product].destroy
 
-  end
 end

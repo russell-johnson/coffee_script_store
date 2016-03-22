@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get '/product_card', to: 'products#product_card'
   get '/product_detail', to: 'products#detail_card'
-  get '/product_destroy', to: 'products#destroy'
+
 end

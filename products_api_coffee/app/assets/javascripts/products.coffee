@@ -37,23 +37,13 @@ $(document).ready ->
       error: (data) ->
         console.log('error')
 
-  $(document).on 'click', '.delete' (e) ->
+  $(document).on 'click', '.delete', (e) ->
     e.preventDefault()
     id = $(this).data('id')
     $.ajax
       url: "#{baseUrl}/products/#{id}"
-      type: 'GET'
+      type: 'DELETE'
       success: (data) ->
-        $.ajax
-          url: '/product_delete'
-          type: 'DELETE'
-          data:
-            product: data.product
-          success: () ->
-            console.log('here')
-            # $('#products').empty()
-            # $('#products').append data
-          error: () ->
-            console.log('error')
+        console.log('success')
       error: (data) ->
         console.log('error')
